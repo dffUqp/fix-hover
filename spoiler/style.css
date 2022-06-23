@@ -1,0 +1,372 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+li[class] {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.header {
+  padding: 10px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.header__body {
+  display: flex;
+  align-items: center;
+  min-height: 120px;
+}
+
+.header__main {
+  display: flex;
+  align-items: center;
+  flex: 0 0 calc(494 / 1200 * 100%);
+}
+
+@media (max-width: 992px) {
+  .header__main {
+    flex: 1 1 auto;
+  }
+}
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 1;
+  }
+
+  .burger:after,
+  .burger:before {
+    content: "";
+    background-color: #000000;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+
+  .burger:before {
+    top: 0;
+  }
+
+  .burger:after {
+    bottom: 0;
+  }
+
+  .burger span {
+    position: absolute;
+    background-color: #000000;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: 9px;
+  }
+
+  .menu__body {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    background-color: aqua;
+    width: 100%;
+  }
+}
+
+.header__logo {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39/24 * 100%;
+  /* identical to box height */
+
+  color: #192252;
+  z-index: 5;
+}
+
+.menu {
+  flex: 0 1 420px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .menu__body.active {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    padding: 100px 15px 30px 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+.menu__sub-list {
+  background-color: orange;
+  padding: 15px;
+  flex: 1 1 100%;
+}
+
+.menu__sub-list {
+  min-width: 200px;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .menu__sub-list {
+    display: none;
+  }
+
+  .menu__item.active .menu__sub-list {
+    display: block;
+    position: relative;
+  }
+}
+
+.menu__item {
+  display: flex;
+  align-items: center;
+  margin: 0 4px;
+  padding: 5px 0;
+  position: relative;
+}
+@media (hover: hover) {
+  .menu__item:hover .menu__sub-list {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .menu__item:hover .menu__link {
+    color: orange;
+  }
+}
+
+.menu__item.active .menu__sub-list {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .menu__item {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.menu__link {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #192252;
+  transition: color 0.3s ease 0s;
+}
+
+@media (max-width: 768px) {
+  .menu__link {
+    font-size: 20px;
+  }
+}
+
+.menu__sub-item:not(:last-child) {
+  margin: 0px 0px 5px 0px;
+}
+
+.menu__sub-link {
+  color: rgb(14, 12, 10);
+  line-height: 120%;
+}
+
+@media (min-width: 992px) {
+  .header__search {
+    flex: 1 1 100%;
+  }
+}
+
+.header__search {
+  z-index: 5;
+}
+
+.search-form {
+  max-width: 473px;
+}
+
+.search-form.active .search-form__item {
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-form__item {
+  display: flex;
+  background-color: white;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .search-form__item {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -100%;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.search-form__btn {
+  flex: 0 0 45px;
+  height: 45px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  font-size: 15px;
+  color: black;
+  align-items: center;
+}
+
+.search-form__icon {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .search-form__icon {
+    display: block;
+  }
+
+  .seacrh-form.active .search-form__item {
+    top: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease 0s;
+  }
+}
+
+.search-form__input {
+  font-size: 14px;
+  max-width: 200px;
+  width: 100%;
+  padding: 0 20px 0 0;
+  border: none;
+}
+
+.search-form__input:focus {
+  outline: none;
+}
+
+body {
+  background-color: coral;
+}
+
+.header__action {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}

@@ -1,0 +1,54 @@
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.btn {
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  background: #0e1734;
+  border-radius: 4px;
+  color: #ffff;
+}
+
+@media (hover: hover) {
+  .btn:hover {
+    background: #15224c;
+    border-radius: 2px;
+    color: #d7dcec;
+    transition: all 0.3s ease 0s;
+  }
+}
+
+.headline-text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 150%;
+  /* or 54px */
+
+  letter-spacing: -0.01em;
+
+  color: #192252;
+}
+
+.about-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  /* or 27px */
+
+  color: #848fac;
+}

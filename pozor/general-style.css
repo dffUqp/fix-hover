@@ -1,0 +1,36 @@
+.container {
+  max-width: 1515px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.btn-main {
+  background: #99baed;
+  border-radius: 20px;
+  padding: 23px 41px 22px 41px;
+  color: white;
+}
+
+.title {
+  font-family: "Catamaran";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 133.6%;
+}
+
+.subtitle {
+  font-family: "Catamaran";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 150.6%;
+  /* or 38px */
+
+  letter-spacing: 0.03em;
+}
+
+.orange-text {
+  color: #fbb400;
+}
