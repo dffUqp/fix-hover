@@ -1,11 +1,10 @@
-Указываем box sizing *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
 /* Убираем внутренние отступы */
-ul[class],
+ul,
 ol[class] {
   padding: 0;
 }
@@ -17,8 +16,8 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -40,18 +39,13 @@ body {
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul[class],
-li[class] {
-  list-style: none;
+ul,
+li {
+  list-style-type: none;
 }
 
 a {
   text-decoration: none;
-}
-
-/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
 }
 
 /* Упрощаем работу с изображениями */
@@ -74,9 +68,9 @@ select {
 }
 
 button {
-  background-color: transparent;
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */

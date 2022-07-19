@@ -13,7 +13,13 @@
     />
 
     <link rel="stylesheet" href="./normalaze-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
 
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script type="module" src="./slider.js" defer></script>
     <link rel="stylesheet" href="./general.css" />
     <link rel="stylesheet" href="style.css" />
 
@@ -51,8 +57,7 @@
               <a href="#" type="btn" class="language"
                 >English <img src="./src/Layer 2.png" alt="action"
               /></a>
-              <a href="#" type="btn" class="language ukr"
-              >Ukrainian</a>
+              <a href="#" type="btn" class="language ukr">Ukrainian</a>
             </div>
             <div class="header__action">
               <a href="#" type="btn" class="header__action profile">
@@ -272,6 +277,78 @@
           </div>
           <div class="projects__btn">
             <a href="#" type="btn" class="">More Projects</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="comments-section">
+        <div class="comments container">
+          <div class="comments__head">
+            <span class="comments__head__subtitle"> Feedback </span>
+            <h1 class="comments__head__title">What saying Customers</h1>
+          </div>
+          <!-- Slider main container -->
+          <div class="swiper">
+            <div class="swiper__btns">
+              <button class="prev">
+                <img src="./src/Group 13.png" alt="#" />
+              </button>
+              <button class="next">
+                <img src="./src/Group 14.png" alt="#" />
+              </button>
+            </div>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="comment">
+                  <span class="comment__text"
+                    >“I’ve been gardening for a very long time, it’s in my
+                    blood. Here are 10 reasons why I love gardening. There’s a
+                    video shot in my own garden too....”</span
+                  >
+                  <div class="comment__author">
+                    <img src="./src/Group 10.png" alt="" />
+                    <div class="author__about">
+                      <span class="author__name">Jansian Mark</span>
+                      <span class="author__post">Product Designer at DPAR</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="comment">
+                  <span class="comment__text"
+                    >“I’ve been gardening for a very long time, it’s in my
+                    blood. Here are 10 reasons why I love gardening. There’s a
+                    video shot in my own garden too....”</span
+                  >
+                  <div class="comment__author">
+                    <img src="./src/Group 10.png" alt="" />
+                    <div class="author__about">
+                      <span class="author__name">Jansian Mark</span>
+                      <span class="author__post">Product Designer at DPAR</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="comment">
+                  <span class="comment__text"
+                    >“I’ve been gardening for a very long time, it’s in my
+                    blood. Here are 10 reasons why I love gardening. There’s a
+                    video shot in my own garden too....”</span
+                  >
+                  <div class="comment__author">
+                    <img src="./src/Group 10.png" alt="" />
+                    <div class="author__about">
+                      <span class="author__name">Jansian Mark</span>
+                      <span class="author__post">Product Designer at DPAR</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

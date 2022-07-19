@@ -1,11 +1,11 @@
-Указываем box sizing *,
+@charset "UTF-8";
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
 /* Убираем внутренние отступы */
-ul[class],
+ul,
 ol[class] {
   padding: 0;
 }
@@ -17,8 +17,8 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -40,18 +40,13 @@ body {
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul[class],
-li[class] {
-  list-style: none;
+ul,
+li {
+  list-style-type: none;
 }
 
 a {
   text-decoration: none;
-}
-
-/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
 }
 
 /* Упрощаем работу с изображениями */
@@ -74,17 +69,51 @@ select {
 }
 
 button {
-  background-color: transparent;
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
+@font-face {
+  font-family: "Martel Sans", sans-serif;
+  src: url("./fonts/MartelSans-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Martel Sans", sans-serif;
+  src: url("./fonts/MartelSans-Bold.ttf");
+  font-weight: 700;
+}
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.parent__cards {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(7, 200px);
+}
+
+.card {
+  height: 290px;
+  background-color: gray;
+  border: 1px solid gold;
+}/*# sourceMappingURL=style.css.map */
