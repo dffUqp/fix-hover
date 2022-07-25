@@ -21,18 +21,4 @@
     height: 20px;
     margin-top: 2px;
   }
-
-  &__hints {
-    display: grid;
-    grid-template-columns: repeat(1,  minmax(100px, 714px));
-    position: absolute;
-    top: 43px;
-    left: -1px;
-  }
-}
-
-.hint {
-  display: flex;
-  background: #ffffff;
-  border: 1px solid #d9d9d9;
 }

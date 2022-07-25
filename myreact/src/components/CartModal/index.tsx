@@ -37,7 +37,6 @@ const CartModal = ({ children, isOpen }: ICartModal): JSX.Element => {
         </div>
 
         <div className={styles.cart__items}>
-          
           {cartItems.map((item) => (
             <CartItem {...item} />
           ))}

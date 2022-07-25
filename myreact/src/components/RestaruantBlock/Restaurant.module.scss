@@ -1,7 +1,5 @@
 .restaurant {
   padding-bottom: 50px;
-  display: flex;
-  flex-direction: column;
 
   &__text {
     display: flex;
@@ -36,22 +34,6 @@
       line-height: 32px;
 
       color: #8c8c8c;
-    }
-  }
-
-  &__items {
-    display: grid;
-    grid-template-columns: repeat(3, 380px);
-    justify-content: center;
-    gap: 20px;
-    
-    @media (max-width: 1200px) {
-      grid-template-columns: repeat(3, 300px);
-      gap: 20px;
-    }
-    @media (max-width: 960px) {
-      grid-template-columns: repeat(2, minmax(250px, 1fr));
-      gap: 10px;
     }
   }
 }

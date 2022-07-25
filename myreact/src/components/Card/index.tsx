@@ -11,7 +11,7 @@ type StoreItemProps = {
   imgUrl: string;
 };
 
-const StoreItem = ({
+const Card = ({
   id,
   name,
   price,
@@ -88,4 +88,4 @@ const StoreItem = ({
   );
 };
 
-export default StoreItem;
+export default Card;

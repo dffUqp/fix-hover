@@ -13,7 +13,7 @@ const index = () => {
           <div className={styles["footer__items-container"]}>
             <ul className={styles["footer__items"]}>
               <li className={styles["footer__items__item"]}>
-                <NavLink className={styles["footer__items__link"]} to="/home">
+                <NavLink className={styles["footer__items__link"]} to="/">
                   Home
                 </NavLink>
               </li>

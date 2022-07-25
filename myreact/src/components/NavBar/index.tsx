@@ -1,5 +1,5 @@
 import { useShoppingCart } from '../../context/ShoppingCartContext';
-import SearchBlock from '../SearchBlock';
+import SearchBlock from '../InputBlock';
 import Button from '../UI/button/Button';
 import styles from './NavBar.module.scss';
 
@@ -7,13 +7,13 @@ function Navbar() {
   const { openCart } = useShoppingCart();
 
   return (
-    <nav className={styles['nav']}>
-      <img src="./images/logo.png" alt="" />
+    <nav className={styles.nav}>
+      <img src="images/logo.png" alt="" />
 
       <SearchBlock />
 
-      <div className={styles['btns']}>
-        <button className={styles['btn']}>
+      <div className={styles.btns}>
+        <button className={styles.btn}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="17"
